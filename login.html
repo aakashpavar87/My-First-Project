@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>1057 Aakash Project WT</title>
+<style>
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.2)50%,rgba(0,0,0,0.2)50%), url(img-2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.form{
+    width: 250px;
+	color:white;
+    height: 380px;
+    position: absolute;
+    right:550px;
+	top:200px;
+	float:
+    border-radius: 15px;
+    padding-left:25px;
+}
+</style>
+<script>
+function validateForm() {  
+    //collect form data in JavaScript variables  
+    var email = document.getElementById("em").value;  
+    var pw1 = document.getElementById("pswd1").value;    
+      
+    //check empty first name field  
+    if(email == "") {  
+      document.getElementById("blankMsg").innerHTML = "**Fill Your Email Please";  
+      return false;  
+    }
+    //check empty password field  
+    if(pw1 == "") {  
+      document.getElementById("message1").innerHTML = "**Fill the password please!";  
+      return false;  
+    }     
+     
+    //minimum password length validation  
+    if(pw1.length < 8) {  
+      document.getElementById("message1").innerHTML = "**Password length must be atleast 8 characters";  
+      return false;  
+    }  
+  
+    //maximum length of password validation  
+    if(pw1.length > 15) {  
+      document.getElementById("message1").innerHTML = "**Password length must not exceed 15 characters";  
+      return false;  
+    }   else {  
+      alert ("Your password created successfully");  
+      document.write("Form has been submitted successfully");  
+    }  
+ }  
+</script>  
+<h1>R.no 1057 Name: Aakash Pavar</h1>
+</head>
+<body>
+<div class="main">
+		<div class="form">
+			<form onsubmit ="return validateForm()" style="border-radius:15px;border:5px solid grey;padding:20px 20px 20px 20px;" action="home.html" >
+                    <h2 style="color:blue;border-bottom:5px dashed yellow;">Login Here</h2>
+                    <input type="email" name="email" placeholder="Enter Email Here" id = "em"><span id="blankMsg" style="color:red"></span><br><br>
+                    <input type="password" name="" placeholder="Enter Password Here" id = "pswd1"><span id="message1" style="color:red"></span>
+					<br><br>
+					<a href="home.html"><input type="submit" value="Login"></a>
+                    <p class="link">Don't have an account<br>
+                    <a href="registration.html">Sign up </a> here</a></p>
+                    <p class="liw">Log in with</p>
+
+                    <div class="icons">
+						<image src="images\insta.png"></image>
+						&nbsp;&nbsp;&nbsp;<image src="images\twitter.png"></image>
+						&nbsp;&nbsp;&nbsp;<image src="images\linkedin.png"></image>
+						&nbsp;&nbsp;&nbsp;<image src="images\phone.png"></image>
+                    </div>
+			</form>
+                </div>
+</div>
+</body>
+</html>
